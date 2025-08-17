@@ -1,0 +1,22 @@
+[package]
+# App Metadata
+name = "roobs-kitchen"
+version = "0.1.0"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/mtalha-codes/roobs-kitchen-rs"
+# Build Metadata
+rust-version = "1.89.0"
+edition = "2024"
+
+
+[dependencies]
+argon2 = "0.5.3"
+thiserror = "2.0.14"
+tokio = {version = "1.47.1", features = ["rt-multi-thread", "macros"]}
+email_syntax_verify_opt = "0.1.0"
+pval = "0.1.1"
+ratatui = "0.30.0-alpha.5"
+crossterm = "0.29.0"
+sea-query = {version = "1.0.0-rc.9", features = ["backend-sqlite"]}
+sqlx = {version = "0.8.6", features = ["runtime-tokio", "sqlite"]}
