@@ -10,5 +10,5 @@ This rewrite has some new exciting features over the old parent archived reposit
 - Concurrent App Design with [**tokio**](https://crates.io/crates/tokio) runtime.
 - Beautiful TUI with [**ratatui**](https://crates.io/crates/ratatui) and [**crossterm**](https://crates.io/crates/crossterm).
 - Robust Error Handling with [**thiserror**](https://crates.io/crates/thiserror).
-- SQLite Integration with [**sqlx**](https://crates.io/crates/sqlx), [**libsqlite3-sys**](https://crates.io/crates/libsqlite3-sys).
+- SQLite Integration with [**sqlx**](https://crates.io/crates/sqlx).
 - SQL Query Building with [**SeaQuery**](https://crates.io/crates/sea-query).
