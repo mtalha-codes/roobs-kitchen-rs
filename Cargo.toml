@@ -1,9 +1,11 @@
 [package]
 # App Metadata
 name = "roobs-kitchen"
+description = "Rust Rewrite of Roob's Kitchen App"
 version = "0.1.0"
-license = "MIT"
+license = "MIT OR GPL-3"
 readme = "README.md"
+authors = ["Muhammad Talha <khankkhan123apsacs@gmail.com>"]
 repository = "https://github.com/mtalha-codes/roobs-kitchen-rs"
 # Build Metadata
 rust-version = "1.89.0"
@@ -20,3 +22,15 @@ ratatui = "0.30.0-alpha.5"
 crossterm = "0.29.0"
 sea-query = {version = "1.0.0-rc.9", features = ["backend-sqlite"]}
 sqlx = {version = "0.8.6", features = ["runtime-tokio", "sqlite"]}
+
+
+[profile.dev]
+debug = "full"
+opt-level = 0
+overflow-checks = true
+incremental = true
+
+[profile.release]
+debug = false
+opt-level = 3
+incremental = true
