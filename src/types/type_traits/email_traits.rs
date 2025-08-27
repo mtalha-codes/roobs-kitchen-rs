@@ -8,18 +8,17 @@ impl Display for Email {
     }
 }
 
-impl TryFrom<&str> for Email {
+
+impl TryInto<Email> for &str {
     type Error = EmailError;
-    fn try_from(value: &str) -> Result<Self, Self::Error> {
-        Email::new(value.into())
+    fn try_into(self) -> Result<Email, Self::Error> {
+        Email::new(self)
     }
 }
 
-impl TryFrom<String> for Email {
+impl TryInto<Email> for String {
     type Error = EmailError;
-    fn try_from(value: String) -> Result<Self, Self::Error> {
-        Email::new(value)
+    fn try_into(self) -> Result<Email, Self::Error> {
+        Email::new(self.as_str())
     }
-}
-
-
+} 
